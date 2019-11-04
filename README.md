@@ -47,8 +47,8 @@ $user->save();
 $password = 'helloworld';
 $hash = hashPassword($password);
  
+out: $2y$10$1UK9VnZ/iXnrjIeRzZYh.exowmH32a/RB/rAx.r7Hh0mspeOQeT0O
 ```
-## out: $2y$10$1UK9VnZ/iXnrjIeRzZYh.exowmH32a/RB/rAx.r7Hh0mspeOQeT0O ##
 
 > Compare entered password with hash
 
