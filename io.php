@@ -69,15 +69,7 @@
 				echo 'Table was create';
 				$this->send_table = array();
 
-				//$io_db_connect = io_connect($io_db_host, $io_db_user, $io_db_pass, $io_db_dbname); //Connect to base
-				//$sql = "INSERT INTO test (name, mail, helo) VALUES ('Alex', 'mailsssss', 'Pleas')"; //Generate sql question
-				//if(mysqli_query($io_db_connect, $sql)){
-					//echo "Success";
-					//io_disconnect($io_db_connect); //Close connect
-				//}else{ //if Have errors
-					//echo "Error: ". $sql. "<br>" . mysqli_error($io_db_connect);
-					//io_disconnect($io_db_connect); //Close connect 
-				//}
+				
 
 
 
@@ -96,6 +88,18 @@
 /*------------------------------*/
 
 /*IO Social Network Functions*/
+
+function hashPassword($password){
+	return password_hash($password, PASSWORD_DEFAULT);
+}
+
+function verifyPassword($password, $hash){
+	if(password_verify($password, $hash)){
+		return True;
+	}else{
+		return False;
+	}
+}
 
 
  ?>
